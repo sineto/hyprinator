@@ -6,13 +6,13 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"gitlab.com/sn1o/devbox/hyprinator/cmd/hyprsinator"
+	"gitlab.com/sn1o/devbox/hyprinator/cmd/hyprinator"
 	"gitlab.com/sn1o/devbox/hyprinator/pkg/hyprgo"
 	"gitlab.com/sn1o/devbox/hyprinator/pkg/hyprgo/helpers"
 )
 
 
-func RootCmd(cli *hyprsinator.CLI) *cobra.Command {
+func RootCmd(cli *hyprinator.CLI) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "hyprinator",
 		Short: "hyprinator - tmuxinator-like setup workspaces environment in Hyprland",
@@ -36,7 +36,7 @@ func Execute() {
 	ipc := hyprgo.NewIPCClient(wsocket)
 	event := hyprgo.NewEventClient(rsocket)
 
-	cli := hyprsinator.New(ipc, event)
+	cli := hyprinator.New(ipc, event)
 
 	if err := RootCmd(cli).Execute(); err != nil {
 		_, _ = fmt.Fprintf(os.Stderr, "Error while running command '%s'", err)

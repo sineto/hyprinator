@@ -1,4 +1,4 @@
-package hyprsinator
+package hyprinator
 
 // func (cli *CLI) DispatchCommand() *cobra.Command {
 // 	return &cobra.Command{

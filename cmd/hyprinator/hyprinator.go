@@ -1,4 +1,4 @@
-package hyprsinator
+package hyprinator
 
 import "gitlab.com/sn1o/devbox/hyprinator/pkg/hyprgo"
 

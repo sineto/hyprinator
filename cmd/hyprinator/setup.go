@@ -1,4 +1,4 @@
-package hyprsinator
+package hyprinator
 
 import (
 	"context"
